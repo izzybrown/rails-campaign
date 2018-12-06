@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  startdate: 2018-12-06 15:40:26
+  budget: 1.5
+  brief: MyText
+
+two:
+  title: MyString
+  startdate: 2018-12-06 15:40:26
+  budget: 1.5
+  brief: MyText
