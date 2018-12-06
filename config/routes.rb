@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :event_campaigns
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :event_campaigns, only: [ :index, :show ]
+      resources :event_campaigns, only: [:index, :show, :update, :create, :destroy]
     end
   end
 end
