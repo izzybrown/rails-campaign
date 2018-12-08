@@ -1,9 +1,9 @@
-class Campaign < ActiveRecord::Base
+class EventCampaign < ActiveRecord::Base
   class Index < Trailblazer::Operation
     step :model!
 
     def model!(options, *)
-      options['model'] = ::Campaign.all
+      options['model'] = ::EventCampaign.all
     end
   end
 end

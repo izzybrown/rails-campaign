@@ -1,6 +1,6 @@
 class Api::V1::EventCampaignsController < Api::V1::BaseController
 
-  before_action :set_event_campaign, only: [:show, :destroy]
+  before_action :set_event_campaign, only: [:show, :create, :destroy]
 
   def index
     @event_campaigns = EventCampaign.all
@@ -29,7 +29,6 @@ class Api::V1::EventCampaignsController < Api::V1::BaseController
    def destroy
     @event_campaign.destroy
     head :no_content
-    # No need to create a `destroy.json.jbuilder` view
   end
 
   private
