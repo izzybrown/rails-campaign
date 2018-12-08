@@ -1,5 +1,4 @@
 class Api::V1::EventCampaignsController < Api::V1::BaseController
-
   before_action :set_event_campaign, only: [:show, :create, :destroy]
 
   def index
@@ -10,10 +9,10 @@ class Api::V1::EventCampaignsController < Api::V1::BaseController
   end
 
   def update
-  if @event_campaign.update(event_campaign_params)
-    render :show
-  else
-    render_error
+    if @event_campaign.update(event_campaign_params)
+      render :show
+    else
+      render_error
     end
   end
 
@@ -26,7 +25,7 @@ class Api::V1::EventCampaignsController < Api::V1::BaseController
     end
   end
 
-   def destroy
+  def destroy
     @event_campaign.destroy
     head :no_content
   end
@@ -43,6 +42,6 @@ class Api::V1::EventCampaignsController < Api::V1::BaseController
 
   def render_error
     render json: { errors: @event_campaign.errors.full_messages },
-      status: :unprocessable_entity
+    status: :unprocessable_entity
   end
 end

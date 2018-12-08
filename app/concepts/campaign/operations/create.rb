@@ -21,3 +21,4 @@ class EventCampaign < ActiveRecord::Base
     step :notify!
   end
 end
+
